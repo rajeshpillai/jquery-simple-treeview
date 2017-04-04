@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="jquery.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+  <div class="tree">
+    <ul>
+      <li><a>jQuery</a>
+        <ul>
+          <li><a>Selector</a></li>
+          <li><a>Manipulation</a></li>
+          <li><a>Effects</a></li>
+        </ul>
+      </li>
+
+      <li><a>Node JS</a>
+        <ul>
+          <li><a>Core</a></li>
+          <li><a>Foundation</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="tree">
+    <button id="all">Toggle All</button>
+    <ul>
+      <li><a>First Level</a>
+        <ul>
+          <li><a>Second Level</a></li>
+          <li><a>Second Level</a></li>
+          <li><a>Second Level</a></li>
+        </ul>
+      </li>
+      <li><a>First Level</a>
+        <ul>
+          <li><a>Second Level</a>
+            <ul>
+              <li><a>Third Level</a></li>
+              <li><a>Third Level</a></li>
+              <li><a>Third Level</a>
+                <ul>
+                  <li><a>Fourth Level</a></li>
+                  <li><a>Fourth Level</a></li>
+                  <li><a>Fourth Level</a>
+                    <ul>
+                      <li><a>Fifth Level</a></li>
+                      <li><a>Fifth Level</a></li>
+                      <li><a>Fifth Level</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a>Second Level</a></li>
+        </ul>
+      </li>
+      <li><a>First Level</a>
+        <ul>
+          <li><a>Second Level</a></li>
+          <li><a>Second Level</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    $(function () {
+      $(".tree").quickTree({
+        onNodeClick: onclick
+      });
+    })
+
+    function onclick(el) {
+      alert('Getting more data....');
+      console.log(el);
+    }
+  </script>
+</body>
+
+</html>
